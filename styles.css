@@ -1,13 +1,70 @@
 body {
-    font-size: 15px;
-  }
+  font-size: 15px;
+  padding: 50px;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #F93D66, #6D47D9);
+}
   
-  button {
+button {
+  background: #ffc600;
+  border: 0;
+  padding: 10px 20px;
+}
+  
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.top {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "hero hero description"
+        "hero hero description";
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 400px;
+    background: white url(./img/janko-ferlic-sfL_QOnmy00-unsplash.jpg);
+    background-size: cover;
+    background-position: top left;
+    padding: 50px;
+    display: grid;
+    justify-items: start;
+    align-content: center;
+
+}
+
+.hero > * {
     background: #ffc600;
-    border: 0;
-    padding: 10px 20px;
-  }
-  
-  img {
-    max-width: 100%;
-  }
+    padding: 5px;
+}
+
+.hero > h1 {
+    font-size: 32px;
+}
+
+.hero > p {
+    font-size: 24px;
+}
+
+.description {
+    grid-area: description;
+    background-color: #ffc600;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    padding: 15px;
+}
+
+.description > p {
+    margin: 0;
+}
+
