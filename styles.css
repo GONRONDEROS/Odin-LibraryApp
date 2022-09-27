@@ -18,9 +18,15 @@ img {
 .wrapper {
     display: grid;
     grid-gap: 20px;
+    grid-template-areas: 
+    "top top"
+    "form form"
+    "book book"
+    "book book";
 }
 
 .top {
+    grid-area: top;
     display: grid;
     grid-gap: 20px;
     grid-template-areas: 
@@ -67,4 +73,56 @@ img {
 .description > p {
     margin: 0;
 }
+
+.form-area {
+    grid-area: form;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+.form-div input {
+    width: 300px;
+    height: 20px;
+    border-radius: 6px;
+}
+
+.form-div label {
+    background-color: #ffc600;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.form-div-radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+}
+
+.form-div-radio > p {
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+#submit {
+    font-size: 20px;
+    padding: 4px 1px;
+    width: 75px;
+    height: 35px;
+    background-color: #ffc600;
+}
+
+.book {
+    grid-area: book;
+}
+
 
